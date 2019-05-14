@@ -1,6 +1,6 @@
 ---
-- name: Set bootstrap status to false on all Controllers
-  hosts: Controller
+- name: Playbook 5 - Start Contrail on all Controllers
+  hosts: Contrail
   user: heat-admin
   become: true
   tasks:

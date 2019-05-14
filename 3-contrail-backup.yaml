@@ -1,6 +1,6 @@
 ---
 - name: Playbook 3 - Contrail Backup on all Controllers
-  hosts: Contrail
+  hosts: contrail
   user: heat-admin
   become: true
   tasks:

@@ -1,5 +1,5 @@
 ---
-- name: Initializing local backup directory
+- name: Playbook 4 - Initializing local backup directory
   hosts: undercloud
   user: stack
   tasks:

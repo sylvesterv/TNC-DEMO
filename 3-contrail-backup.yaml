@@ -1,0 +1,8 @@
+---
+- name: Playbook 3 - Contrail Backup on all Controllers
+  hosts: Contrail
+  user: heat-admin
+  become: true
+  tasks:
+    - set_fact:
+

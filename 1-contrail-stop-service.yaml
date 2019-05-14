@@ -1,6 +1,6 @@
 ---
-- name: Stop Contrail on all Controllers
-  hosts: Controller
+- name: Playbook 1 - Stop Contrail on all Controllers
+  hosts: Contrail
   user: heat-admin
   become: true
   tasks:

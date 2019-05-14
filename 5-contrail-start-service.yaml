@@ -1,6 +1,6 @@
 ---
 - name: Playbook 5 - Start Contrail on all Controllers
-  hosts: Contrail
+  hosts: contrail
   user: heat-admin
   become: true
   tasks:

@@ -7,7 +7,7 @@
       ping:  
 - name: Playbook 4 - Initializing controller backup directory
   hosts: controller
-  user: stack
+  user: heat-admin
   tasks:
     - name: test ping
       ping:  

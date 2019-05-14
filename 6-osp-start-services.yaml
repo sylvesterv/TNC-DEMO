@@ -1,10 +1,10 @@
 ---
-- name: Playbook 6 - Start Services on all Controllers
+- name: Playbook 6 - Start OpenStack Controller Services
   hosts: controller
   user: heat-admin
   become: true
   tasks:
     - set_fact:
-        bootstrap_node: false 
+        bootstrap_node: false
     - name: test ping
       ping:

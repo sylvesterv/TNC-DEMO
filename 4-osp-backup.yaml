@@ -1,6 +1,12 @@
 ---
-- name: Playbook 4 - Initializing local backup directory
+- name: Playbook 4 - Initializing undercloud backup directory
   hosts: undercloud
+  user: stack
+  tasks:
+    - name: test ping
+      ping:  
+- name: Playbook 4 - Initializing controller backup directory
+  hosts: controller
   user: stack
   tasks:
     - name: test ping

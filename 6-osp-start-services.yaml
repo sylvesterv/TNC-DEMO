@@ -1,6 +1,6 @@
 ---
 - name: Playbook 6 - Start Services on all Controllers
-  hosts: Controller
+  hosts: controller
   user: heat-admin
   become: true
   tasks:

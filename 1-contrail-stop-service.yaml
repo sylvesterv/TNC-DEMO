@@ -1,5 +1,5 @@
 ---
-- name: Set bootstrap status to false on all Controllers
+- name: Stop Contrail on all Controllers
   hosts: Controller
   user: heat-admin
   become: true

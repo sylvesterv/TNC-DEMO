@@ -1,5 +1,5 @@
 ---
-- name: Set bootstrap status to false on all Controllers
+- name: Playbook 2 - Stop OpenStack Controller Services
   hosts: Controller
   user: heat-admin
   become: true

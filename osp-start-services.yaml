@@ -1,0 +1,9 @@
+---
+- name: Set bootstrap status to false on all Controllers
+  hosts: Controller
+  user: heat-admin
+  become: true
+  tasks:
+    - set_fact:
+        bootstrap_node: false
+        

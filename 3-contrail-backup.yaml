@@ -6,3 +6,5 @@
   tasks:
     - set_fact:
 
+    - name: test ping
+      ping:

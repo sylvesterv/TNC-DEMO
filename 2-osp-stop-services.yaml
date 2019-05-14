@@ -1,6 +1,6 @@
 ---
 - name: Playbook 2 - Stop OpenStack Controller Services
-  hosts: Controller
+  hosts: controller
   user: heat-admin
   become: true
   tasks:

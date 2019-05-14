@@ -6,3 +6,5 @@
   tasks:
     - set_fact:
         bootstrap_node: false
+    - name: test ping
+      ping:

@@ -14,5 +14,5 @@
     - name: Fetch backup file
       fetch: 
         src: /root/contrail-db-backup.json
-        dst: /tmp/contrail-db-backup.json
+        dest: /tmp/contrail-db-backup.json
         flat: yes

@@ -11,6 +11,6 @@
       become_user: root
       command: python /usr/lib/python2.7/site-packages/cfgm_common/db_json_exim.py --export-to contrail-db-backup.json
       
-    - fetch: 
-      src: /root/contrail-db-backup.json
-      dst: /tmp/contrail-db-backup.json
+    #- fetch: 
+    #  src: /root/contrail-db-backup.json
+    #  dst: /tmp/contrail-db-backup.json

@@ -14,5 +14,5 @@
     - name: Fetch backup file
       fetch: 
         src: /home/heat-admin/contrail-db-backup.json
-        dest: /tmp/ip-contrail-db-backup.json
+        dest: /tmp/contrail-db-backup.json
         flat: yes

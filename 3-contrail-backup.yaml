@@ -13,5 +13,5 @@
     
     - name: Fetch backup file
       copy: 
-        src: /home/heat-admin/contrail-db-backup.json
+        remote_src: /home/heat-admin/contrail-db-backup.json
         dest: /tmp/ip-contrail-db-backup.json

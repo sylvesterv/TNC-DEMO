@@ -12,7 +12,6 @@
       command: python /usr/lib/python2.7/site-packages/cfgm_common/db_json_exim.py --export-to contrail-db-backup.json
     
     - name: Fetch backup file
-      fetch: 
+      copy: 
         src: /home/heat-admin/contrail-db-backup.json
-        dest: /tmp/contrail-db-backup.json
-        flat: yes
+        dest: /tmp/ip-contrail-db-backup.json

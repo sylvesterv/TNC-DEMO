@@ -1,4 +1,4 @@
-- name: TripleO Overcloud prepare restore
+- name: OpenStack 10 - Overcloud Start Services
   hosts: controller-0
   user: heat-admin
   become: true
@@ -6,3 +6,19 @@
     - name: Stop pacemaker
       shell: |
         pcs cluster start --all
+  tasks:
+    - name: Stop OpenStack
+      shell: |
+        systemctl start openstack-*
+  tasks:
+    - name: Stop Neutron
+      shell: |
+        systemctl start neutron-*        
+  tasks:
+    - name: Stop HA Proxy
+      shell: |
+        systemctl start haproxy
+  tasks:
+    - name: Stop HTTPd
+      shell: |
+        systemctl start httpd

@@ -3,22 +3,22 @@
   user: heat-admin
   become: true
   tasks:
-    - name: Stop pacemaker
+    - name: Start Pacemaker
       shell: |
         pcs cluster start --all
   tasks:
-    - name: Stop OpenStack
+    - name: Start OpenStack
       shell: |
         systemctl start openstack-*
   tasks:
-    - name: Stop Neutron
+    - name: Start Neutron
       shell: |
         systemctl start neutron-*        
   tasks:
-    - name: Stop HA Proxy
+    - name: Start HA Proxy
       shell: |
         systemctl start haproxy
   tasks:
-    - name: Stop HTTPd
+    - name: Start HTTPd
       shell: |
         systemctl start httpd

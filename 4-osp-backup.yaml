@@ -1,15 +1,15 @@
-# ---
-# - name: Init backup directory on the hypervisor
-#   hosts: hypervisor
-#   tasks:
-#      - name: Remove the backup
-#         file:
-#           path: /var/tmp/overcloud-backup-filesystem/
-#           state: absent
-#       - name: Create a temporary filesystem backup directory
-#         file:
-#           path: /var/tmp/overcloud-backup-filesystem/
-#           state: directory
+---
+- name: Init backup directory on the hypervisor
+  hosts: hypervisor
+  tasks:
+     - name: Remove the backup
+        file:
+          path: /var/tmp/overcloud-backup-filesystem/
+          state: absent
+      - name: Create a temporary filesystem backup directory
+        file:
+          path: /var/tmp/overcloud-backup-filesystem/
+          state: directory
 
 - name: Initializing database backups on the bootstrap controller node
   hosts: controller

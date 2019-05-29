@@ -1,18 +1,18 @@
----
-- name: Init backup directory on the hypervisor
-  hosts: hypervisor
-  tasks:
-      - name: Remove the backup
-        file:
-          path: /var/tmp/overcloud-backup-filesystem/
-          state: absent
-      - name: Create a temporary filesystem backup directory
-        file:
-          path: /var/tmp/overcloud-backup-filesystem/
-          state: directory
+# ---
+# - name: Init backup directory on the hypervisor
+#   hosts: hypervisor
+#   tasks:
+#      - name: Remove the backup
+#         file:
+#           path: /var/tmp/overcloud-backup-filesystem/
+#           state: absent
+#       - name: Create a temporary filesystem backup directory
+#         file:
+#           path: /var/tmp/overcloud-backup-filesystem/
+#           state: directory
 
 - name: Initializing database backups on the bootstrap controller node
-  hosts: controller-0
+  hosts: controller
   user: heat-admin
   become: true
   tasks:
@@ -26,7 +26,7 @@
         state: directory
 
 - name: Backup mariadb database
-  hosts: controller-0
+  hosts: controller
   user: heat-admin
   become: true
   tasks:
@@ -86,7 +86,7 @@
 
 
 - name: Backing up MongoDB
-  hosts: controller-0
+  hosts: controller
   user: heat-admin
   become: true
   tasks:
@@ -111,7 +111,7 @@
       when: mongo_running.failed == false
 
 - name: Backing up redis
-  hosts: controller-0
+  hosts: controller
   user: heat-admin
   become: true
   tasks:
@@ -136,7 +136,7 @@
         dest: /var/tmp/overcloud-backup-database/redis/dump.rdb
 
 - name: Archive database backup directory and copy it to the undercloud
-  hosts: controller-0
+  hosts: controller
   user: heat-admin
   become: true
   tasks:
@@ -176,7 +176,7 @@
         state: directory
 
 - name: Check the last yum installation before the upgrading
-  hosts: overcloud_nodes
+  hosts: compute
   user: heat-admin
   become: true
   tasks:
